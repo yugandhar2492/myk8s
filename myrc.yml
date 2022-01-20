@@ -5,16 +5,14 @@ metadata:
 spec:
    replicas: 3
    selector: 
-     app: myjenkins-rc
-     version: 2.7.2
+     app: myjenkins-pod
    template:
      metadata:
        labels:
-          app: myjenkins-rc
-          version: 2.7.2
+          app: myjenkins-pod
      spec:
         containers:
-        - name: myjenkins-rc-container   
-          image: maha4iac/myjenkins-rc:2
+        - name: myjenkins-container   
+          image: jenkins:2.60.3
           ports:
-          - containerPort: 8080  
+          - containersport: 8080
